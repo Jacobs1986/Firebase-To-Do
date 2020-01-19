@@ -18,5 +18,13 @@ var database = firebase.database();
 $("#submitTask").on("click", function(event) {
     // prevent the page from reloading
     event.preventDefault();
-    
+    console.log("clicked");
+    // get the information from the task id
+    var taskName = $("#task").val().trim();
+    console.log(taskName);
+    // create paragraph and add the text of taskname to it
+    var paragraph = $("<p>").text(taskName);
+    console.log(paragraph);
+    // clear task and focus on it
+    $("#task").val("").focus();
 })
