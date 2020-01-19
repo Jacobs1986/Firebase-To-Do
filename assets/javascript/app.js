@@ -11,4 +11,12 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+// Global variables
 var database = firebase.database();
+
+// function for submit button
+$("#submitTask").on("click", function(event) {
+    // prevent the page from reloading
+    event.preventDefault();
+    
+})
