@@ -13,6 +13,7 @@ firebase.initializeApp(firebaseConfig);
 
 // Global variables
 var database = firebase.database();
+var listNumber = 1;
 
 // function for submit button
 $("#submitTask").on("click", function(event) {
@@ -22,8 +23,8 @@ $("#submitTask").on("click", function(event) {
     // get the information from the task id
     var taskName = $("#task").val().trim();
     console.log(taskName);
-    // create paragraph and add the text of taskname to it
-    var paragraph = $("<p>").text(taskName);
+    // create paragraph and add the text of taskname to it, add class of Item-listNumber, added an id of Item-listNumber
+    var paragraph = $("<p>").addClass("list").attr("id", `Item-${listNumber}`).text(taskName);
     console.log(paragraph);
     // clear task and focus on it
     $("#task").val("").focus();
