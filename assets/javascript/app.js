@@ -26,6 +26,9 @@ $("#submitTask").on("click", function(event) {
     // create paragraph and add the text of taskname to it, add class of Item-listNumber, added an id of Item-listNumber
     var paragraph = $("<p>").addClass("list").attr("id", `Item-${listNumber}`).text(taskName);
     console.log(paragraph);
+    // create checkmark button
+    var checkmark = $("<button>").addClass("checkBox").attr("id", listNumber).text("x");
+    console.log(checkmark);
     // clear task and focus on it
     $("#task").val("").focus();
 })
