@@ -29,6 +29,10 @@ $("#submitTask").on("click", function(event) {
     // create checkmark button
     var checkmark = $("<button>").addClass("checkBox").attr("id", listNumber).text("x");
     console.log(checkmark);
+    // prepend the checkmark button to the paragraph
+    paragraph.prepend(checkmark);
+    // append to list
+    $("#list").append(paragraph);
     // clear task and focus on it
     $("#task").val("").focus();
 })
