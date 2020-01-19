@@ -33,6 +33,13 @@ $("#submitTask").on("click", function(event) {
     paragraph.prepend(checkmark);
     // append to list
     $("#list").append(paragraph);
+    // save to database
+    database.ref().push({
+        number: listNumber,
+        task: taskName
+    })
+    // increase listNumber
+    listNumber++
     // clear task and focus on it
     $("#task").val("").focus();
 })
